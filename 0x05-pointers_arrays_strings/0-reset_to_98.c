@@ -1,11 +1,19 @@
-#include "main.h"
+#include "../main.h"
+#include <stdio.h>
 
 /**
- * reset_to_98 - updates the value of the variable
- * the pointer points to to 98
- * @n: pointer to the variable to update
- */
-void reset_to_98(int *n)
+ * main - check the code for ALX School students.
+ *
+ * Return: Always 0.
+*/
+
+int main(void)
 {
-	*n = 98;
+	int n;
+
+	n = 402;
+	printf("n = %d\n", n);
+	reset_to_98(&n);
+	printf("n = %d\n", n);
+	return (0);
 }
