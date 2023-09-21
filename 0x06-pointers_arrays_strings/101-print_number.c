@@ -1,35 +1,26 @@
 #include "main.h"
-
 /**
- * print_number - printing number with puts
+ *print_number - prints an integer.
+ *only using the putchar function.
+ *noarrays and pointers.
+ *@n: integer to be printed.
  *
- * @n: input int
+ *Return: void.
  */
 void print_number(int n)
 {
-	/*Declaring variables*/
-	int count = 0, pow = 1;
-	unsigned int num = n;
-
-
-	if (n < 0) /*Evaluate this condition*/
+	unsigned int num;
+/*check if number is negative*/
+	num = n;
+	if (n < 0)
 	{
-		_putchar('-');
+		_putchar(45);
 		num = -n;
 	}
-	while (n != 0)
+/* print number by recursion*/
+	if (num / 10)
 	{
-		n /= 10;
-		count++;
+		print_number(num / 10);
 	}
-	while (count > 1)
-	{
-		pow *= 10;
-		count--;
-	}
-	while (pow >= 1)
-	{
-		_putchar(num / pow % 10 + '0');
-		pow /= 10;
-	}
+	_putchar((num % 10) + '0');
 }
