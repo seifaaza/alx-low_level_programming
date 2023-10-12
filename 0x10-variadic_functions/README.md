@@ -1,1 +1,1 @@
-0x10. C - Variadic functions readme file
+0x10-variadic_functions readme file
